@@ -1,31 +1,23 @@
 import React from "react";
 import {Engagespot} from "@engagespot/react-component";
 import { sendNotification } from "./service/api";
+import { Route,Routes } from "react-router-dom";
+import LoginPage from "./Auth/Login";
+import DataProvider from "./Context/DataContext";
+import { useContext } from "react";
+import { DataContext } from "./Context/DataContext";
+import Compo from "./compo/Compo";
 
-const theme = {
-   notificationButton: {
-      iconFill: '#B764AB',
-   },
-   colors: {
-      brandingPrimary: '#B764AB',
-      colorSecondary: '#ecebfa',
-   },
-   feedItem: {
-      hoverBackground: '#ecebfa',
-   },
-   dropdown: {
-      hoverBackground: '#ecebfa',
-      menuItemHoverBackground: '#ecebfa',
-   },
-};
 
 const App = () => {
+  
   return (
-    <div>
-      <Engagespot apiKey="70lqwpbeq4kicg0xszf4z9" userId="yethu@kichu" theme = {theme} />,
-      <button onClick={() => sendNotification()}
-         >Send</button>
-    </div>
+     <DataProvider>
+      <Compo/>
+      </DataProvider>
+    
+     
+         
   )
 }
 

@@ -1,16 +1,22 @@
 import axios from 'axios';
 
-export const sendNotification = () => {
+export const sendNotification = (array,find) => {
+
+
+
+  
+    array.map((item,i) => {
+
+    
     return axios.post(
         'https://api.engagespot.co/v3/notifications',
         {
             "notification": {
-                "title": "Anand commented on your photo",
-                "message": "Hey Steve, you're looking cool 😎. Who took this photo?",
-                "url": "https://your-app.com/photos/17293739",
-                "category": "comment"
+                "title":item.title,
+                "message": item.description,
+                "category": item.author,
               },
-            recipients: ["yethu@kichu"],
+            recipients:find,
         },
         {
             headers: {
@@ -19,7 +25,55 @@ export const sendNotification = () => {
             },
         }
     );
+   
+})
 };
+
+const URL = "http://localhost:8000"
+export const authSignup = async (data) => {
+    try {
+        console.log("before signup")
+        return await axios.post(`${URL}/signup`, data)
+        console.log("after signup")
+    } catch (error) {
+        console.log("error on signup")
+
+    }
+
+}
+
+export const dataCreate = async (data) => {
+    try {
+      
+        return await axios.post(`${URL}/create`, data)
+       
+    } catch (error) {
+        console.log("error on dataCreate")
+
+    }
+
+}
+
+export const dataGet = async () => {
+    try {
+       return await axios.get(`${URL}/get`)
+    } catch (error) {
+        console.log("error on dataGet")
+
+    }
+
+}
+export const getUser = async () => {
+    try {
+       return await axios.get(`${URL}/getuser`)
+    } catch (error) {
+        console.log("error on dataGet")
+
+    }
+
+}
+
+
 
 
 

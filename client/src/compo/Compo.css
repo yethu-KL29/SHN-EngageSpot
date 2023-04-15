@@ -1,0 +1,42 @@
+/* Compo.css */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .notificationButton {
+    /* Additional styles for notification button */
+    background-color: #B764AB;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+  }
+  
+  .feedItem {
+    /* Additional styles for feed item */
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #B764AB;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+  
+  .dropdown {
+    /* Additional styles for dropdown */
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #B764AB;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+  
+  /* Add additional styles as needed */
+  
