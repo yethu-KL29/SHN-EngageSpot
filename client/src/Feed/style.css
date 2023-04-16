@@ -29,6 +29,13 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+  .feed-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
   .feed-title {
     margin: 0;
     font-size: 24px;
@@ -37,7 +44,7 @@
   }
   
   .feed-description {
-    margin: 8px 0;
+    margin: 0;
     font-size: 18px;
     color: #666;
   }
@@ -46,5 +53,15 @@
     margin: 0;
     font-size: 16px;
     color: #888;
+  }
+  
+  .feed-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .feed-icon {
+    margin-right: 4px;
+    color: #007bff; /* Custom color for icons */
   }
   
