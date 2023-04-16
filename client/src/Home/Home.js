@@ -22,11 +22,10 @@ const Home = () => {
     if (res && res.data) {
       setarray(res.data.message);
       getUser(setusername);
-      navigate("/send");
       sendNotification(array, username);
+      navigate("/feed"); 
       
-      // Use navigate() to navigate to '/send' route
-    }
+    } 
   };
 
   const inputchange = (e) => {
