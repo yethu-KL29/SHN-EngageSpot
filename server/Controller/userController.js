@@ -36,18 +36,17 @@ const login=async(req,res,next)=>{
     }
     return res.status(404).json({message:"passwors is incorrect"})
   }
-
-const getUser = async (req, res) => {
-    let user;
+  const getUser = async (req, res) => {
     try {
-        user = await User.find();
+        const users = await User.find();
+        const usernames = users.map(user => user.username); // Extract usernames from the fetched user data
+        res.status(200).json({ usernames: usernames }); // Send the usernames as a JSON response
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ message: "Failed to fetch user data" }); // Send an error response if fetching user data fails
     }
-    res.status(200).json({message:user})
 }
-  
-  
+
 
 module.exports = {
     userSignup,

@@ -1,45 +1,41 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook from React Router
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { dataCreate, dataGet, sendNotification,getUser } from "../service/api";
+import { dataCreate, dataGet, sendNotification, getUser } from "../service/api";
 
 const Home = () => {
-  
-  const [array, setarray] = useState([])
-  const [find, setfind] = useState([])
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  const [array, setarray] = useState([]);
+  const [username, setusername] = useState([]);
   const [data, setdata] = useState({
     title: "",
     description: "",
     author: "",
-    });
-    
- 
+  });
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        let response = await dataCreate(data);
-        console.log(response);
-        let res = await dataGet();
-        if (res && res.data && res.data.message) {
-          setarray(res.data.message);
-           sendNotification(array,find);
-         
-         
-        }
-       
-          
-    
-
-      };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let response = await dataCreate(data);
+    let res = await dataGet();
+    if (res && res.data) {
+      setarray(res.data.message);
+      getUser(setusername);
+      navigate("/send");
+      sendNotification(array, username);
       
-  const inputchange = (e) => {
+      // Use navigate() to navigate to '/send' route
+    }
+  };
 
+  const inputchange = (e) => {
     setdata({
-        ...data,
-        [e.target.name]: e.target.value
-    })
-    console.log(data)
-    };
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+    console.log(data);
+  };
 
   return (
     <form onSubmit={handleSubmit}>

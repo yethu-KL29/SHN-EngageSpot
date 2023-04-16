@@ -32,6 +32,7 @@ const Compo = () => {
   return (
     <div className="wrapper">
       <Routes>
+       {user?
         <Route
           path="/send"
           element={
@@ -41,6 +42,7 @@ const Compo = () => {
             </div>
           }
         />
+        :null}
         <Route path="/" element={<LoginPage />} />
       </Routes>
     </div>

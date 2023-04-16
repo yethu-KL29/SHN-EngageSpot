@@ -24,6 +24,8 @@ const dataGet = async (req, res) => {
     let data;
     try {
         data = await Data.find();
+    
+        
     } catch (error) {
         console.log(error)
     }

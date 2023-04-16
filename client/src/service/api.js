@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const sendNotification = (array,find) => {
+export const sendNotification = (array,username) => {
 
 
 
@@ -16,7 +16,7 @@ export const sendNotification = (array,find) => {
                 "message": item.description,
                 "category": item.author,
               },
-            recipients:find,
+            recipients:username,
         },
         {
             headers: {
@@ -44,9 +44,9 @@ export const authSignup = async (data) => {
 
 export const dataCreate = async (data) => {
     try {
-      
+        
         return await axios.post(`${URL}/create`, data)
-       
+         
     } catch (error) {
         console.log("error on dataCreate")
 
@@ -63,9 +63,10 @@ export const dataGet = async () => {
     }
 
 }
-export const getUser = async () => {
+export const getUser = async (setusername) => {
     try {
-       return await axios.get(`${URL}/getuser`)
+       let res = await axios.get(`${URL}/getuser`)
+       setusername(res.data.usernames)
     } catch (error) {
         console.log("error on dataGet")
 
