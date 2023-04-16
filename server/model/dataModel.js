@@ -15,6 +15,11 @@ description:{
     trim:true,
 
 },
+image:{
+    type:String,
+    required:true,
+    trim:true,
+},
 author:{
     type:String,
     required:true,

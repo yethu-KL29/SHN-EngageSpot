@@ -1,6 +1,6 @@
 const Data = require('../model/dataModel');
 const dataCreate = async (req, res) => {
-    const {title,description,author } = req.body;
+    const {title,description,author,image } = req.body;
     let data;
     try {
         data = new Data({
@@ -8,6 +8,7 @@ const dataCreate = async (req, res) => {
         title,
         description,
         author,
+        image
          
         });
         await data.save();

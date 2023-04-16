@@ -1,0 +1,83 @@
+.my-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .my-form .MuiFormControl-root {
+    margin-bottom: 1rem;
+  }
+  
+  .my-form .MuiButton-root {
+    margin-top: 1rem;
+    background-color: #1976d2;
+    color: #ffffff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .my-form .MuiButton-root:hover {
+    background-color: #1565c0;
+  }
+  
+  .my-form .MuiInputLabel-root {
+    color: #777777;
+  }
+  
+  .my-form .MuiOutlinedInput-root {
+    border-radius: 4px;
+  }
+  
+  .my-form .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #777777;
+  }
+  
+  .my-form .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: #dddddd;
+  }
+  
+  .my-form .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1976d2;
+  }
+  
+  .my-form .MuiOutlinedInput-input {
+    color: #333333;
+  }
+  
+  .my-form .MuiFormHelperText-root {
+    color: #777777;
+  }
+.my-form{
+    margin-top:10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 20px rgb(112, 81, 146);
+  }
+
+  body {
+    background-image: url('https://cdn.pixabay.com/photo/2013/08/09/05/54/layer-170971_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+ 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .my-form {
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 400px;
+  }
+  
+
+  
