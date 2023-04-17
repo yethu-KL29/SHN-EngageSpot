@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Newsletter Sending Application using EncourageSpot System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a newsletter sending application that uses EncourageSpot System to manage subscribers and send newsletters.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone https://github.com/your-username/newsletter-sending-app.git
 
-### `npm test`
+markdown
+Copy code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
 
-### `npm run build`
+cd newsletter-sending-app
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+sql
+Copy code
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Create a .env file and add the following variables:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ENCOURAGESPOT_API_KEY=<your_encouragespot_api_key>
+ENCOURAGESPOT_LIST_ID=<your_encouragespot_list_id>
 
-### `npm run eject`
+markdown
+Copy code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the application:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+markdown
+Copy code
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+1. Open your browser and navigate to `http://localhost:3000`.
+2. Sign up for an account or log in if you already have one.
+3. Create a new newsletter by clicking the "Create Newsletter" button.
+4. Write your newsletter content in the editor.
+5. Add subscribers to your list by clicking the "Add Subscribers" button and entering their email addresses.
+6. Send your newsletter by clicking the "Send Newsletter" button.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- EncourageSpot integration for managing subscribers and sending newsletters.
+- WYSIWYG editor for creating newsletters.
+- Subscriber management.
+- Newsletter scheduling.
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
